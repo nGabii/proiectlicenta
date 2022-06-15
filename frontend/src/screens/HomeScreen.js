@@ -2,6 +2,9 @@ import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import logger from 'use-reducer-logger';
 import Product from '../components/Product';
+import { Helmet } from 'react-helmet-async';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 //import data from '../data';
 
 const initialState = {
@@ -46,12 +49,15 @@ function HomeScreen() {
 
   return (
     <div>
+      <Helmet>
+        <title>Nume Site</title>
+      </Helmet>
       <h1>Featured products</h1>
       <div className="products">
         {loading ? (
-          <div>Loading...</div>
+          <LoadingBox></LoadingBox>
         ) : error ? (
-          <div>{error}</div>
+          <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           products.map((product) => (
             <div key={product.slug}>

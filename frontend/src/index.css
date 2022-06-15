@@ -34,3 +34,74 @@ main {
 .product-info {
   padding: 1rem;
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row.top {
+  align-items: flex-start;
+}
+
+.col-1 {
+  flex: 1 1 25rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+
+.succes {
+  color: limegreen;
+}
+
+.fail {
+  color: red;
+}
+
+/* Card */
+
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: lightgray;
+  border-radius: 0.5rem;
+  margin: 2.5rem;
+}
+
+.card-body {
+  padding: 1.3rem;
+}
+
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+
+img.large {
+  width: 70%;
+  margin-top: 40px;
+}
+
+.img-large {
+  max-width: 100%;
+}
+
+.img-thumbnail {
+  height: 80px;
+}
+
+/* signin screen */
+
+.small-container {
+  max-width: 600px;
+}
